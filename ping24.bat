@@ -5,6 +5,10 @@ set "baseIP=192.168.178."
 set "startIP=1"
 set "endIP=254"
 
+if %1.==. do (
+    set baseIP=%1
+)
+
 echo Pinging IP addresses from %baseIP%%startIP% to %baseIP%%endIP%...
 
 for /L %%i in (%startIP%, 1, %endIP%) do (
